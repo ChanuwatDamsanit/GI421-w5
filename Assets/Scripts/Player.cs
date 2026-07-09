@@ -11,16 +11,7 @@ namespace BU.Workshop
         private float _lookSpeed = 2f;
 
         [SerializeField]
-        private float _jumpForce = 5f;
-
-        [SerializeField]
         private float _gravity = -9.81f;
-
-        [SerializeField]
-        private float _groundDrag = 5f;
-
-        [SerializeField]
-        private LayerMask _groundLayer;
 
         [SerializeField]
         private float _defaultFOV = 60f;
@@ -39,7 +30,6 @@ namespace BU.Workshop
 
         private float _xRotation;
         private Vector3 _velocity;
-        private bool _isGrounded;
         private float _targetFOV;
 
         private void Start()
@@ -94,16 +84,15 @@ namespace BU.Workshop
 
         private void HandleMovement()
         {
-            _isGrounded = _characterController.isGrounded;
-
-            if (_isGrounded && _velocity.y < 0)
-            {
-                _velocity.y = 0f;
-            }
-
             // Get input
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
+
+            if (horizontalInput == 0 && verticalInput == 0)
+            {
+                // Reset velocity when no input is detected
+                _velocity = Vector3.zero;
+            }
 
             // Calculate movement direction
             Vector3 moveDirection = transform.forward * verticalInput + transform.right * horizontalInput;
@@ -111,12 +100,6 @@ namespace BU.Workshop
 
             // Apply movement
             _characterController.Move(moveDirection * _moveSpeed * Time.deltaTime);
-
-            // Handle jumping
-            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
-            {
-                _velocity.y = Mathf.Sqrt(_jumpForce * -2f * _gravity);
-            }
 
             // Apply gravity
             _velocity.y += _gravity * Time.deltaTime;
