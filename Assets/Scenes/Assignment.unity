@@ -517,7 +517,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd989d2f5459da448eb52e119ad0cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BU.Workshop.ResourceSceneManager
-  _resourcePath: Moving_Castle
+  _resourcePaths:
+  - Moving_Castle
+  _spawnOffset: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
