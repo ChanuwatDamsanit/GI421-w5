@@ -7,18 +7,18 @@ namespace BU.Workshop
     public class AddressableSceneManager : MonoBehaviour
     {
         [SerializeField]
-        private AssetReferenceGameObject _playerAddressable;
+        private AssetReferenceGameObject _addressableToSpawn;
 
         private void Start()
         {
             // Loads the data without placing anything in the hierarchy
-            _playerAddressable.LoadAssetAsync().Completed += OnPlayerLoaded;
+            _addressableToSpawn.LoadAssetAsync().Completed += OnPlayerLoaded;
         }
 
         private void OnDisable()
         {
             // Release the loaded asset when the scene is disabled
-            _playerAddressable.ReleaseAsset();
+            _addressableToSpawn.ReleaseAsset();
         }
 
         private void OnPlayerLoaded(AsyncOperationHandle<GameObject> handle)
