@@ -25,6 +25,22 @@ namespace BU.Workshop
             HandleMouseLook();
             HandleMovement();
             HandleCursorToggle();
+            HandleVerticleMove();
+        }
+
+        private void HandleVerticleMove()
+        {
+            bool isUpPressed = Input.GetKey(KeyCode.Space);
+            bool isDownPressed = Input.GetKey(KeyCode.LeftControl);
+
+            if (isUpPressed)
+            {
+                transform.Translate(Vector3.up * _moveSpeed * Time.deltaTime, Space.World);
+            }
+            else if (isDownPressed)
+            {
+                transform.Translate(Vector3.down * _moveSpeed * Time.deltaTime, Space.World);
+            }
         }
 
         private void HandleMouseLook()
