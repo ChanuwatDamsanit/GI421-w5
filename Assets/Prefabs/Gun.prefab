@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386970511953013000}
+  - component: {fileID: 3724316943439662820}
+  - component: {fileID: 4685174735700735669}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -34,6 +36,42 @@ Transform:
   - {fileID: 6560022782518960647}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3724316943439662820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964427702818741808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32bfab1b5549c2a40bd79ec3375a8741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BU.Workshop.Gun
+  _bulletPrefab: {fileID: 107215400156328657, guid: 59daa33ce97ed314abaf02b29a04527d, type: 3}
+  _muzzleRoot: {fileID: 1647967393956161849}
+  _fireRate: 50
+  _randomRotateRangeMin: -60
+  _randomRotateRangeMax: 60
+  _useAutoFire: 1
+--- !u!114 &4685174735700735669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964427702818741808}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fa0a0915ba71a4db96faab343b953b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BU.Workshop.GunWithPooling
+  _bulletPrefab: {fileID: 107215400156328657, guid: 59daa33ce97ed314abaf02b29a04527d, type: 3}
+  _muzzleRoot: {fileID: 1647967393956161849}
+  _fireRate: 50
+  _randomRotateRangeMin: -60
+  _randomRotateRangeMax: 60
+  _useAutoFire: 1
 --- !u!1 &1647967393956161849
 GameObject:
   m_ObjectHideFlags: 0
