@@ -6,10 +6,9 @@ namespace BU.Workshop
     public sealed class PoolingManager : MonoBehaviour
     {
         [SerializeField]
-        private static IObjectPool<Bullet> _bulletPool;
-
-        [SerializeField]
         private Bullet _bulletPrefab;
+
+        private static IObjectPool<Bullet> _bulletPool;
 
         private void OnEnable()
         {
