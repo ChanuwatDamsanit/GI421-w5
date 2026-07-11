@@ -20,6 +20,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28535bfa68b64f840a5365913edd667b
+    m_Address: Assets/ArtAssets/3d model/Moving_Castle_LOD.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35b9c858c8f1b9f43b9582bdbb28c397
+    m_Address: Assets/ArtAssets/3d model/Moving_Castle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0e9a44673e374704ebe444c774797345, type: 2}
   m_SchemaSet:
